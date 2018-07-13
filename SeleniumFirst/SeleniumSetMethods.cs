@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Support.UI;
 
-namespace SeleniumFirst
+namespace AutomationTraining
 {
     public static class SeleniumSetMethods
     {

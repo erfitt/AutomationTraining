@@ -57,12 +57,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EAPageObject.cs" />
-    <Compile Include="LoginPageObject.cs" />
+    <Compile Include="Mindmill\ErrorGuessingPage.cs" />
+    <Compile Include="Mindmill\IntroductionObject.cs" />
+    <Compile Include="Mindmill\LoginPageObject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="PropertiesCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SeleniumGetMethods.cs" />
     <Compile Include="SeleniumSetMethods.cs" />
+    <Compile Include="Mindmill\UserBioData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

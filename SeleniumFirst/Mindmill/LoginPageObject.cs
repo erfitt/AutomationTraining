@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using SeleniumFirst;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,22 +16,22 @@ namespace AutomationTraining
             PageFactory.InitElements(PropertiesCollection.driver, this);
         }
 
-        [FindsBy(How = How.Name, Using = "UserName")]
+        [FindsBy(How = How.Name, Using = "ApplicantID")]
         public IWebElement txtUserName { get; set; }
 
-        [FindsBy(How = How.Name, Using = "Password")]
+        [FindsBy(How = How.Name, Using = "UserPassword")]
         public IWebElement txtPassword { get; set; }
 
-        [FindsBy(How = How.Name, Using = "Login")]
+        [FindsBy(How = How.XPath, Using = "//input[@value='Log On']")]
         public IWebElement btnLogin { get; set; }
 
-        public EAPageObject Login (string userName, string password)
+        public UserBioData Login (string userName, string password)
         {
             txtUserName.EnterText(userName);
             txtPassword.EnterText(password);
-            btnLogin.Clicks();
+            btnLogin.Submit();
 
-            return new EAPageObject();
+            return new UserBioData();
         }
     }
 }
